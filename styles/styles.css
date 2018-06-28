@@ -1,0 +1,286 @@
+/* --------------------------
+  Base Styles
+--------------------------- */
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #222426;
+  font-size: 16px;
+	margin: 0;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: #656a6e;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+
+header,
+.nav {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav li {
+  align-self: center;
+  display: block;
+  background-color: white;
+  width: 70%;
+  padding: .4em;
+  margin: .5em;
+
+}
+
+header {
+  background-color: #F9FEFF;
+  text-align: center;
+  padding-top: .5em;
+}
+
+.nav a:hover {
+  border-bottom:1px solid #d2d2d2;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#portfolio,
+#skills {
+  margin-top: 0px;
+  text-align: center;
+  color:rgb(64, 64, 64);
+}
+
+#skills {
+  padding-top: 1em;
+}
+
+body {
+  background-color: #F9FEFF;
+}
+
+.nav {
+  padding-top: .5em;
+}
+
+.profile-image {
+  padding: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+#contact {
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.15em;
+  text-align: center;
+  color: #656a6e;
+}
+
+h1,
+h2,
+h4{
+  color:rgb(64, 64, 64);
+}
+
+h3{
+  color: rgb(102, 102, 102);
+  text-align: center;
+}
+
+.portfolio-image {
+  width:90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#top-footer{
+}
+
+a:hover {
+  border-bottom:1px solid #d2d2d2;
+}
+
+footer,
+.footer-nav{
+  display:flex;
+  flex-direction: row;
+}
+
+.footer-nav{
+  display:none;
+}
+
+.top-footer {
+  color: rgb(64, 64, 64);
+  font-size: 16px;
+  margin-right:2em;
+  margin-top:1.33em;
+}
+
+.footer-name{
+  margin-right: auto;
+  margin-left: 2em;
+}
+
+.nav {
+  align-self: center;
+}
+
+.badge-image {
+  width:55%;
+  display: block;
+  margin: 0 auto;
+}
+
+.skills-header {
+  border-bottom: 5px solid rgb(64, 64, 64);
+}
+
+.name {
+  color: #1f3780;
+}
+/* --------------------------
+  Media Queries
+--------------------------- */
+
+@media (min-width: 768px) {
+  header {
+    justify-content: flex-end;
+  }
+
+  .nav {
+    margin-top: 2em;
+    flex-direction:row;
+    width: 50%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: .25rem;
+  }
+  .nav a {
+    background-color: transparent;
+  }
+
+  .profile-image {
+    width:40%;
+    float:right;
+    vertical-align: top;
+    padding-top: 0;
+    padding-left: 1.5rem;
+  }
+
+  .intro {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+
+  .skills-card {
+    width:100%;
+    margin: 0 0;
+  }
+
+  .card {
+    width: 50%;
+    float: left;
+  }
+
+  .wrapper {
+   display: block;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .footer-nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.33em;
+    margin-right: 2em;
+  }
+
+  .footer-nav li {
+    margin-left: 1em;
+  }
+
+  .top-footer {
+    display: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    flex-direction: row;
+  }
+
+  .nav {
+    margin: 0;
+    width:auto;
+    padding-right: 1em;
+    align-self: center;
+  }
+
+  .nav a{
+    width:100%;
+  }
+
+  .name {
+    margin-right: auto;
+    padding-left: 2em;
+  }
+
+  .card {
+    width: 33.33%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+  }
+}
